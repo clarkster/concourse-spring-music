@@ -156,6 +156,7 @@ resources:
   source:
     bucket: {{S3_BUCKET}}
     key: pipeline-artifacts/current-version
+    region_name: {{S3_REGION}}
     access_key_id: {{S3_ACCESS_KEY_ID}}
     secret_access_key: {{S3_SECRET_ACCESS_KEY}}
     initial_version: 1.0.0
@@ -165,6 +166,7 @@ resources:
   source:
     bucket: {{S3_BUCKET}}
     regexp: pipeline-artifacts/spring-music-(.*).war
+    region_name: {{S3_REGION}} 
     access_key_id: {{S3_ACCESS_KEY_ID}}
     secret_access_key: {{S3_SECRET_ACCESS_KEY}}
 
@@ -173,6 +175,7 @@ resources:
   source:
     bucket: {{S3_BUCKET}}
     regexp: deployments/spring-music-(.*).war
+    region_name: {{S3_REGION}} 
     access_key_id: {{S3_ACCESS_KEY_ID}}
     secret_access_key: {{S3_SECRET_ACCESS_KEY}}
 
